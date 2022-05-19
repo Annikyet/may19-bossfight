@@ -75,7 +75,14 @@ class Draw {
   }
 }
 
+class Control {
+  heroAttack(id) {
+    hero.attack(id)
+  }
+}
+
 let draw = new Draw
+let control = new Control
 
 let scratch = new Attack('scratch', 'Scratch', 10, 90, 10)
 let bite = new Attack('bite', 'Bite', 20, 80, 20)
