@@ -83,8 +83,10 @@ function heroDeath(combatant) {
 }
 
 function attack(attack, attacker, defender) {
+  console.log(attacker + " used " + attack + " against " + defender)
   if(combatants[attacker].isAlive) {
     let damage = calcDamage(attack, attacker)
+    console.log('dmg: ' + damage)
     if (combatants[defender].health <= damage) {
       if (combatants[defender].party === 'enemy') {
         enemyDeath(defender)
@@ -138,3 +140,5 @@ function draw() {
 }
 
 draw()
+
+setInterval(attack, 500, 'fizzle', 'coke', 'monster')
